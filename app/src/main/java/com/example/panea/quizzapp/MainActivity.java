@@ -74,7 +74,9 @@ public class MainActivity extends AppCompatActivity {
         return (nameField.getText().toString().trim().length() == 0);
     }
 
-
+    /**
+     * Used for storing the state of the checkboxes for questions from 2 to 5;
+     */
     public void questions() {
 
         /**
@@ -132,7 +134,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Checks if "Nah" answer for the last question is checked
+     * Checks if "Nah" checkbox answer for the last question is checked
      * and if it is then unchecks the second and third answear
      */
 
@@ -154,8 +156,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Checks if "Hell Yeah!" answer for the last question is checked
-     * and unchecks the state of "Nah" answear
+     * Checks if "Hell Yeah!" checkbox answer for the last question is checked
+     * and if it is then unchecks the state of "Nah" answear
      */
 
     public void onlyYeah(View v) {
@@ -176,6 +178,7 @@ public class MainActivity extends AppCompatActivity {
      * @param view
      */
     public void doneIt(View view) {
+        //Used for storing the score
         int score = 0;
 
         // Calculate the score for first question
@@ -230,14 +233,15 @@ public class MainActivity extends AppCompatActivity {
         if (q5a3State) {
             score = score + 5;
         }
+        //Displays a congratulations text after the button is pressed
         TextView congrats = (TextView) findViewById(R.id.congratulations);
         congrats.setVisibility(View.VISIBLE);
+
         if (isCat) {
             Toast.makeText(this, "Hey Cat, your score is: Over 9000!!!", Toast.LENGTH_LONG).show();
-        }else if (checkNameIfEmpty()) {
+        } else if (checkNameIfEmpty()) {
             Toast.makeText(this, "Please enter your name ", Toast.LENGTH_LONG).show();
-        }
-        else {
+        } else {
 
             Toast.makeText(this, yourName() + ", your score is: " + score + "/70", Toast.LENGTH_LONG).show();
         }
