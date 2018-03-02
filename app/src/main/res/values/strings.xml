@@ -1,11 +1,43 @@
 <resources>
     <string name="app_name">QuizzApp</string>
-    <string name="quizz_description">This is a quizz about your Erasmus Experience</string>
+    <!-- String for describing the quizz -->
+    <string name="quizz_description">This is a quizz about the Erasmus Programme</string>
+    <!-- First question -->
     <string name="q1">What are you?</string>
-    <string name="q2">Why did you choose Erasmus?</string>
-    <string name="q3">What was your favourite thing about your Erasmus experience?</string>
-    <string name="q4">Was something you didn\'t liked about it?</string>
-    <string name="q5">Would you do it again?</string>
+    <!-- Second question -->
+    <string name="q2">Erasmus Programme is based in:</string>
+    <!-- Second question - first answear -->
+    <string name="q2a1">Europe</string>
+    <!-- Second question - second answear -->
+    <string name="q2a2">Antartica</string>
+    <!-- Second question - third answear -->
+    <string name="q2a3">All around the world</string>
+    <!-- Third question -->
+    <string name="q3">What was the old name of the Erasmus Programme?</string>
+    <!-- Third question - first answear -->
+    <string name="q3a1">Erasmus Mundus</string>
+    <!-- Third question - second answear -->
+    <string name="q3a2">Socrates programme</string>
+    <!-- Third question - third answear -->
+    <string name="q3a3">Scoala Vieti</string>
+    <!-- Fourth question -->
+    <string name="q4">Erasmus Programme is funded by:</string>
+    <!-- Fourth question - first answear -->
+    <string name="q4a1">Soros</string>
+    <!-- Fourth question - second answear -->
+    <string name="q4a2">Gigi Becali</string>
+    <!-- Fourth question - third answear -->
+    <string name="q4a3">European Union</string>
+    <!-- Fifth question -->
+    <string name="q5">Who can enroll in the Erasmus Programme? (Two right answers)</string>
+    <!-- Fifth question - first answear -->
+    <string name="q5a1">Anyone who studied at "Scoala Vieti"</string>
+    <!-- Fifth question - second answear -->
+    <string name="q5a2">Any european student</string>
+    <!-- Fifth question - third answear -->
+    <string name="q5a3">Students of Engieneering</string>
+    <!-- The button that calculates the score -->
     <string name="done_button">Done it!</string>
+    <!-- A string trat shows a congratulations message after the "done it!" button is pressed -->
     <string name="contratulations">Congratulations!!!</string>
 </resources>

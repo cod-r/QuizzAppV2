@@ -72,34 +72,34 @@
             android:layout_marginBottom="8dp"
             android:text="@string/q2" />
 
-        <LinearLayout
+        <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:orientation="vertical">
 
-            <CheckBox
+            <RadioButton
                 android:id="@+id/q2a1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="I like meeting new people" />
+                android:text="@string/q2a1" />
 
-            <CheckBox
+            <RadioButton
                 android:id="@+id/q2a2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="I like to explore new cultures" />
+                android:text="@string/q2a2" />
 
-            <CheckBox
+            <RadioButton
                 android:id="@+id/q2a3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="I just want to party!" />
-        </LinearLayout>
+                android:text="@string/q2a3" />
+        </RadioGroup>
 
         <TextView
             style="@style/QuestionsStyle"
@@ -107,34 +107,34 @@
             android:layout_marginBottom="8dp"
             android:text="@string/q3" />
 
-        <LinearLayout
+        <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:orientation="vertical">
 
-            <CheckBox
+            <RadioButton
                 android:id="@+id/q3a1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="I have friends all around the world now" />
+                android:text="@string/q3a1" />
 
-            <CheckBox
+            <RadioButton
                 android:id="@+id/q3a2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Everything was perfect" />
+                android:text="@string/q3a2" />
 
-            <CheckBox
+            <RadioButton
                 android:id="@+id/q3a3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="So much new food" />
-        </LinearLayout>
+                android:text="@string/q3a3" />
+        </RadioGroup>
 
         <TextView
             style="@style/QuestionsStyle"
@@ -142,34 +142,34 @@
             android:layout_marginBottom="8dp"
             android:text="@string/q4" />
 
-        <LinearLayout
+        <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:orientation="vertical">
 
-            <CheckBox
+            <RadioButton
                 android:id="@+id/q4a1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Yeah" />
+                android:text="@string/q4a1" />
 
-            <CheckBox
+            <RadioButton
                 android:id="@+id/q4a2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="The dormitories" />
+                android:text="@string/q4a2" />
 
-            <CheckBox
+            <RadioButton
                 android:id="@+id/q4a3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Some classes were too hard :(" />
-        </LinearLayout>
+                android:text="@string/q4a3" />
+        </RadioGroup>
 
 
         <TextView
@@ -190,24 +190,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:onClick="onlyNah"
-                android:text="Nah" />
+                android:text="@string/q5a1" />
 
             <CheckBox
                 android:id="@+id/q5a2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:onClick="onlyYeah"
-                android:text="Hell Yeah!" />
+                android:text="@string/q5a2" />
 
             <CheckBox
                 android:id="@+id/q5a3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:onClick="onlyNah"
-                android:text="Just give me that damn schoolarship" />
+                android:text="@string/q5a3" />
         </LinearLayout>
 
         <Button

@@ -12,19 +12,19 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
 
-    // First question variables for storing the state of the checkboxes
+    // First question variables for storing the state of the radio buttons
     boolean isMale;
     boolean isFemale;
     boolean isCat;
-    //Second question variables for storing the state of the checkboxes
+    //Second question variables for storing the state of the radio buttons
     boolean q2a1State;
     boolean q2a2State;
     boolean q2a3State;
-    //Third question variables for storing the state of the checkboxes
+    //Third question variables for storing the state of the radio buttons
     boolean q3a1State;
     boolean q3a2State;
     boolean q3a3State;
-    //Fourth question variables for storing the state of the checkboxes
+    //Fourth question variables for storing the state of the radio buttons
     boolean q4a1State;
     boolean q4a2State;
     boolean q4a3State;
@@ -41,80 +41,58 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Radio buttons for the first question
+     * Used for saving the state of all RadioButtons and all CheckBoxes
      */
-    public void radios() {
+    public void saveButtonsState() {
+
+        /**
+         * Radio buttons for the first question
+         */
         RadioButton maleRadio = (RadioButton) findViewById(R.id.q1_male_radio);
-        // Used for storing the state of the Male radio button
         isMale = maleRadio.isChecked();
 
         RadioButton femaleRadio = (RadioButton) findViewById(R.id.q1_female_radio);
-        // Used for storing the state of the Female radio button
         isFemale = femaleRadio.isChecked();
 
         RadioButton catRadio = (RadioButton) findViewById(R.id.q1_cat_radio);
-        // Used for storing the state of the Cat radio button
         isCat = catRadio.isChecked();
-    }
-
-    /**
-     * Used for storing the name introduced by the user
-     */
-    public String yourName() {
-        EditText nameField = (EditText) findViewById(R.id.name_field);
-        String name = nameField.getText().toString();
-        return name;
-    }
-
-    /**
-     * Checks if the user has written the name in the name field
-     */
-    private boolean checkNameIfEmpty() {
-        EditText nameField = (EditText) findViewById(R.id.name_field);
-        return (nameField.getText().toString().trim().length() == 0);
-    }
-
-    /**
-     * Used for storing the state of the checkboxes for questions from 2 to 5;
-     */
-    public void questions() {
 
         /**
-         * Checkboxes for the second question
+         * Radios for the second question
          */
-        CheckBox q2a1 = (CheckBox) findViewById(R.id.q2a1);
+        RadioButton q2a1 = (RadioButton) findViewById(R.id.q2a1);
         q2a1State = q2a1.isChecked();
 
-        CheckBox q2a2 = (CheckBox) findViewById(R.id.q2a2);
+        RadioButton q2a2 = (RadioButton) findViewById(R.id.q2a2);
         q2a2State = q2a2.isChecked();
 
-        CheckBox q2a3 = (CheckBox) findViewById(R.id.q2a3);
+        RadioButton q2a3 = (RadioButton) findViewById(R.id.q2a3);
         q2a3State = q2a3.isChecked();
 
         /**
-         * Checkboxes for the third question
+         * Radios for the third question
          */
 
-        CheckBox q3a1 = (CheckBox) findViewById(R.id.q3a1);
+        RadioButton q3a1 = (RadioButton) findViewById(R.id.q3a1);
         q3a1State = q3a1.isChecked();
 
-        CheckBox q3a2 = (CheckBox) findViewById(R.id.q3a2);
+        RadioButton q3a2 = (RadioButton) findViewById(R.id.q3a2);
         q3a2State = q3a2.isChecked();
 
-        CheckBox q3a3 = (CheckBox) findViewById(R.id.q3a3);
+        RadioButton q3a3 = (RadioButton) findViewById(R.id.q3a3);
         q3a3State = q3a3.isChecked();
 
         /**
-         * Checkboxes for the fourth question
+         * Radios for the fourth question
          */
 
-        CheckBox q4a1 = (CheckBox) findViewById(R.id.q4a1);
+        RadioButton q4a1 = (RadioButton) findViewById(R.id.q4a1);
         q4a1State = q4a1.isChecked();
 
-        CheckBox q4a2 = (CheckBox) findViewById(R.id.q4a2);
+        RadioButton q4a2 = (RadioButton) findViewById(R.id.q4a2);
         q4a2State = q4a2.isChecked();
 
-        CheckBox q4a3 = (CheckBox) findViewById(R.id.q4a3);
+        RadioButton q4a3 = (RadioButton) findViewById(R.id.q4a3);
         q4a3State = q4a3.isChecked();
 
         /**
@@ -134,43 +112,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Checks if "Nah" checkbox answer for the last question is checked
-     * and if it is then unchecks the second and third answear
+     * Used for storing the name introduced by the user
      */
-
-
-    public void onlyNah(View v) {
-        CheckBox q5a1 = (CheckBox) findViewById(R.id.q5a1);
-        q5a1State = q5a1.isChecked();
-
-        CheckBox q5a2 = (CheckBox) findViewById(R.id.q5a2);
-        q5a2State = q5a2.isChecked();
-        CheckBox q5a3 = (CheckBox) findViewById(R.id.q5a3);
-
-        q5a3State = q5a3.isChecked();
-        if (q5a1State) {
-            q5a2.setChecked(false);
-            q5a3.setChecked(false);
-        }
-
+    public String yourName() {
+        EditText nameField = (EditText) findViewById(R.id.name_field);
+        String name = nameField.getText().toString();
+        return name;
     }
 
     /**
-     * Checks if "Hell Yeah!" checkbox answer for the last question is checked
-     * and if it is then unchecks the state of "Nah" answear
+     * Checks if the user has written the name in the name field
      */
-
-    public void onlyYeah(View v) {
-        CheckBox q5a1 = (CheckBox) findViewById(R.id.q5a1);
-        q5a1State = q5a1.isChecked();
-
-        CheckBox q5a2 = (CheckBox) findViewById(R.id.q5a2);
-        q5a2State = q5a2.isChecked();
-        if (q5a2State) {
-            q5a1.setChecked(false);
-        }
-
+    private boolean checkNameIfEmpty() {
+        EditText nameField = (EditText) findViewById(R.id.name_field);
+        return (nameField.getText().toString().trim().length() == 0);
     }
+
+
 
     /**
      * Used for calculating the overall score.
@@ -182,8 +140,7 @@ public class MainActivity extends AppCompatActivity {
         int score = 0;
 
         // Calculate the score for first question
-        radios();
-        questions();
+        saveButtonsState();
         if (isMale) {
             score = score + 15;
         } else if (isFemale) {
@@ -194,56 +151,36 @@ public class MainActivity extends AppCompatActivity {
         if (q2a1State) {
             score = score + 5;
         }
-        if (q2a2State) {
-            score = score + 5;
-        }
-        if (q2a3State) {
-            score = score + 5;
-        }
 
         // Calculate the score for the third question
-        if (q3a1State) {
-            score = score + 5;
-        }
         if (q3a2State) {
             score = score + 5;
         }
-        if (q3a3State) {
-            score = score + 5;
-        }
+
 
         // Calculate the score for the fourth question
-        if (q4a1State) {
-            score = score + 5;
-        }
-        if (q4a2State) {
-            score = score + 5;
-        }
         if (q4a3State) {
             score = score + 5;
         }
 
         // Calculate the score for the fifth question
-        if (q5a1State) {
-            score = score + 5;
-        }
         if (q5a2State) {
             score = score + 5;
         }
         if (q5a3State) {
             score = score + 5;
         }
-        //Displays a congratulations text after the button is pressed
-        TextView congrats = (TextView) findViewById(R.id.congratulations);
-        congrats.setVisibility(View.VISIBLE);
+
 
         if (isCat) {
             Toast.makeText(this, "Hey Cat, your score is: Over 9000!!!", Toast.LENGTH_LONG).show();
         } else if (checkNameIfEmpty()) {
             Toast.makeText(this, "Please enter your name ", Toast.LENGTH_LONG).show();
         } else {
-
-            Toast.makeText(this, yourName() + ", your score is: " + score + "/70", Toast.LENGTH_LONG).show();
+            //Displays a congratulations text after the button is pressed
+            TextView congrats = (TextView) findViewById(R.id.congratulations);
+            congrats.setVisibility(View.VISIBLE);
+            Toast.makeText(this, yourName() + ", your score is: " + score + "/40", Toast.LENGTH_LONG).show();
         }
     }
 }
