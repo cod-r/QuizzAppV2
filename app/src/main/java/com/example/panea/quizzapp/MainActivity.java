@@ -164,6 +164,9 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // Calculate the score for the fifth question
+        if (q5a1State) {
+            score = score - 5;
+        }
         if (q5a2State) {
             score = score + 5;
         }
