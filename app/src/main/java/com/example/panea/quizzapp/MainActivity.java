@@ -110,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
     /**
      * Used for checking the answer of the first question
      */
@@ -135,7 +136,6 @@ public class MainActivity extends AppCompatActivity {
         EditText nameField = (EditText) findViewById(R.id.name_field);
         return (nameField.getText().toString().trim().length() == 0);
     }
-
 
 
     /**
