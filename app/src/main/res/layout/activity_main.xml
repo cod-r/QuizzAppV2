@@ -34,7 +34,7 @@
         <TextView
             style="@style/QuestionsStyle"
             android:layout_height="wrap_content"
-            android:text="@string/q1" />
+            android:text="@string/q0" />
 
 
         <RadioGroup
@@ -65,6 +65,19 @@
                 android:layout_weight="1"
                 android:text="Cat" />
         </RadioGroup>
+        <TextView
+            style="@style/QuestionsStyle"
+            android:layout_height="wrap_content"
+            android:text="@string/q1" />
+
+        <EditText
+            android:id="@+id/participated_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:hint="Yes/No" />
 
         <TextView
             style="@style/QuestionsStyle"

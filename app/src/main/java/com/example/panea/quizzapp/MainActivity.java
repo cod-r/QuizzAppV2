@@ -110,11 +110,19 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+    /**
+     * Used for checking the answer of the first question
+     */
+    private String participatedCheck() {
+        EditText participatedField = (EditText) findViewById(R.id.participated_field);
+        String answear = participatedField.getText().toString();
+        return answear;
+    }
 
     /**
      * Used for storing the name introduced by the user
      */
-    public String yourName() {
+    private String yourName() {
         EditText nameField = (EditText) findViewById(R.id.name_field);
         String name = nameField.getText().toString();
         return name;
@@ -138,40 +146,31 @@ public class MainActivity extends AppCompatActivity {
     public void doneIt(View view) {
         //Used for storing the score
         int score = 0;
-
-        // Calculate the score for first question
         saveButtonsState();
-        if (isMale) {
-            score = score + 15;
-        } else if (isFemale) {
-            score = score + 15;
+
+        if (participatedCheck().equals("Yes") || participatedCheck().equals("yes")) {
+            score = score + 20;
         }
 
         // Calculate the score for the second question
         if (q2a1State) {
-            score = score + 5;
+            score = score + 20;
         }
 
         // Calculate the score for the third question
         if (q3a2State) {
-            score = score + 5;
+            score = score + 20;
         }
 
 
         // Calculate the score for the fourth question
         if (q4a3State) {
-            score = score + 5;
+            score = score + 20;
         }
 
         // Calculate the score for the fifth question
-        if (q5a1State) {
-            score = score - 5;
-        }
-        if (q5a2State) {
-            score = score + 5;
-        }
-        if (q5a3State) {
-            score = score + 5;
+        if (!q5a1State && q5a2State && q5a3State) {
+            score = score + 20;
         }
 
 
@@ -183,7 +182,7 @@ public class MainActivity extends AppCompatActivity {
             //Displays a congratulations text after the button is pressed
             TextView congrats = (TextView) findViewById(R.id.congratulations);
             congrats.setVisibility(View.VISIBLE);
-            Toast.makeText(this, yourName() + ", your score is: " + score + "/40", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, yourName() + ", your score is: " + score + "/100", Toast.LENGTH_LONG).show();
         }
     }
 }

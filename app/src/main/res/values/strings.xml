@@ -2,8 +2,10 @@
     <string name="app_name">QuizzApp</string>
     <!-- String for describing the quizz -->
     <string name="quizz_description">This is a quizz about the Erasmus Programme</string>
+    <!-- Zero question -->
+    <string name="q0">What are you?</string>
     <!-- First question -->
-    <string name="q1">What are you?</string>
+    <string name="q1">Have you ever participated in the Erasmus Programme?</string>
     <!-- Second question -->
     <string name="q2">Erasmus Programme is based in:</string>
     <!-- Second question - first answear -->
